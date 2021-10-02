@@ -5,12 +5,14 @@
 }
 
 .container{
-    max-width: 300px;
+    max-width: 360px;
     height: 100vh;
     margin: auto;
     background-color: aquamarine;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container h1{
@@ -42,6 +44,11 @@ button {
     border: none;
     margin-top: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+button:hover{
+    letter-spacing: -.5px;
+    width: 55px;
 }
 
 .result {
