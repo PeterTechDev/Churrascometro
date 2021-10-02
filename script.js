@@ -45,5 +45,7 @@ const drinksPerPerson = (duration) => {
 }
 
 
-
-document.querySelector('button').addEventListener('click', calculate)
+document.querySelector('button').addEventListener('click', (event)=>{
+    event.preventDefault()
+    calculate()
+})
