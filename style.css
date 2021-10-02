@@ -5,7 +5,7 @@
 }
 
 .container{
-    max-width: 90vw;
+    max-width: 300px;
     height: 100vh;
     margin: auto;
     background-color: aquamarine;
@@ -50,6 +50,8 @@ button {
     /* border: 1px solid #000; */
     margin: 1rem auto;
     text-align: justify;
+    background-color: paleturquoise;
+    padding: 10px;
     
 }
 
