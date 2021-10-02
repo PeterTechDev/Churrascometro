@@ -2,7 +2,7 @@ let adultInput = document.getElementById('adultsNumber');
 let childrenInput = document.getElementById('childrenNumber')
 let durationInput = document.getElementById('duration');
 
-let resultDiv = document.getElementById('result');
+let resultDiv = document.querySelector('.result');
 
 
 function calculate() {
@@ -14,10 +14,23 @@ function calculate() {
     const beerResult = beerPerPerson(duration) * adultInput.value;
     const drinksResult = drinksPerPerson(duration) * adultInput.value + (drinksPerPerson(duration) / 2 * childrenInput.value)
 
-    // ${qdtTotalCarne/1000} Kg de Carne
-    // ${Math.ceil(qdtTotalCerveja/355)} latas de Cerveja
-    // ${Math.ceil(qdtTotalBebidas/2000)} garrafas de Bebidas
-
+    resultDiv.innerHTML = `<h3 class="result-info">Você vai precisar de:</h3>`
+    resultDiv.innerHTML +=
+        `
+        <div class="result-item">
+        <p>${meatResult / 1000} Kg de Carne</p>
+        </div>
+    `
+    resultDiv.innerHTML += `
+        <div class="result-item">
+            <p>${Math.ceil(beerResult / 355)} latas de Cerveja</p>
+        </div>
+    `
+    resultDiv.innerHTML += `
+        <div class="result-item">
+        <p>${Math.ceil(drinksResult / 1000)} litros de Bebidas</p>
+        </div>
+    `
 }
 
 const meatPerPerson = (duration) => {
@@ -44,8 +57,7 @@ const drinksPerPerson = (duration) => {
     }
 }
 
-
-document.querySelector('button').addEventListener('click', (event)=>{
+document.querySelector('button').addEventListener('click', (event) => {
     event.preventDefault()
     calculate()
 })

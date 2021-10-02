@@ -5,7 +5,8 @@
 }
 
 .container{
-    max-width: 300px;
+    max-width: 90vw;
+    height: 100vh;
     margin: auto;
     background-color: aquamarine;
     padding: 20px;
@@ -20,15 +21,16 @@
 
 form {
     display: flex;
+    margin-top: 20px;
     flex-direction: column;
     /* background-color: chocolate; */
 }
 
 input{
-    width: 100%;
+    width: 90%;
     display: block;
-    padding: 5px;
-    margin:10px 0;
+    padding: 10px;
+    margin:10px auto;
 }
 
 button {
@@ -37,4 +39,25 @@ button {
     border-radius: 50%;
     align-self: center;
     background-color: chartreuse;
+    border: none;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+}
+
+.result {
+    width: 90%;
+    /* height: 10vh; */
+    /* border: 1px solid #000; */
+    margin: 1rem auto;
+    text-align: justify;
+    
+}
+
+.instructions{
+    padding-top: 20px;
+    text-align: justify;
+}
+.instructions li{
+    list-style: url();
+    padding: 5px 0;
 }
